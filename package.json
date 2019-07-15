@@ -1,22 +1,23 @@
 {
-  "name": "fellowship.gdansk.adwentysci.org",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/finalclass/iafg.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/finalclass/iafg/issues"
-  },
-  "homepage": "https://github.com/finalclass/iafg#readme",
-  "dependencies": {
-    "http-server": "^0.11.1"
-  }
+    "name": "fellowship.gdansk.adwentysci.org",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "http-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/finalclass/iafg.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/finalclass/iafg/issues"
+    },
+    "homepage": "https://github.com/finalclass/iafg#readme",
+    "dependencies": {
+        "http-server": "^0.11.1"
+    }
 }
