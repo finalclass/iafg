@@ -3466,8 +3466,6 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -8049,8 +8047,7 @@ h1, h2, h3, h4, h5,
     padding: 0; }
   .ftco-navbar-light .navbar-brand {
     color: #fff;
-    padding-top: .7rem;
-    padding-bottom: .7rem; }
+  }
     .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
       color: #000000 !important; }
     @media (max-width: 991.98px) {
@@ -8222,8 +8219,6 @@ h1, h2, h3, h4, h5,
       transition: .3s all ease-out; }
     .ftco-navbar-light.scrolled .navbar-brand {
       color: #000000;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
       font-size: 24px; }
       .ftco-navbar-light.scrolled .navbar-brand span {
         color: #ffd615; }
@@ -8338,7 +8333,7 @@ h1, h2, h3, h4, h5,
             position: relative; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h1 {
-              font-size: 40px; } }
+              font-size: 25px; } }
         .owl-carousel.home-slider .slider-item .slider-text p {
           font-weight: 400;
           font-size: 18px;
@@ -9917,3 +9912,88 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
+.ftco_navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand .logo-white {
+    height: 61px;
+}
+
+.scrolled .navbar-brand .logo-white {
+    display: none;
+}
+
+.navbar-brand .logo-black {
+    height: 48px;
+    display: none;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.scrolled .navbar-brand .logo-black {
+    display: block;
+}
+
+
+@media (max-width: 900px) {
+    #about-section .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #about-section .people {
+        width: 100%;
+        margin-left:0;
+    }
+
+    #worship-section .worship-photo-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    #worship-section .worship-photo-container {
+        width: 100%;
+    }
+
+    #contact-section .church-photo-container img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+}
+
+.ftco-about-section .heading strong {
+    color: #FFD615;
+}
+
+#about-section .text-inner {
+    margin-top: 80px;
+}
+
+#worship-section {
+    margin-top: 100px;
+}
+
+#worship-section ul {
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+#worship-section ul.regular-service-info {
+    margin-bottom: 50px;
+}
+
+#worship-section strong em {
+    color: #FFD615;
+    font-style: normal;
+}
+
+#contact-section {
+    padding-top: 0;
+}
+
+#about-section {
+    margin-top: 140px;
+}
