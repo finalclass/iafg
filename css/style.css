@@ -9952,7 +9952,7 @@ textarea.form-control {
         padding: 0;
     }
 
-    #worship-section .worship-photo-container {
+    #worship-section .worship-photo-container img {
         width: 100%;
     }
 
@@ -9961,6 +9961,10 @@ textarea.form-control {
         margin: 0;
         padding: 0;
         height: auto;
+    }
+
+    #tell-the-world {
+        width: 100%
     }
 }
 
@@ -9996,4 +10000,17 @@ textarea.form-control {
 
 #about-section {
     margin-top: 140px;
+}
+
+.useful-links h2 {
+    text-align: center;
+}
+
+.ftco-footer .ftco-footer-widget.bible-verse h2 {
+    text-align: center;
+    margin-left: 0;
+}
+
+.bible-verse p {
+    text-align: justify;
 }
