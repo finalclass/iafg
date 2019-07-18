@@ -9936,6 +9936,14 @@ textarea.form-control {
     display: block;
 }
 
+#about-section {
+    text-align: left;
+}
+
+#about-section .people {
+    width: 100%;
+}
+
 
 @media (max-width: 900px) {
     #about-section .row {
@@ -9943,7 +9951,6 @@ textarea.form-control {
         margin-right: 0;
     }
     #about-section .people {
-        width: 100%;
         margin-left:0;
     }
 
@@ -9995,11 +10002,27 @@ textarea.form-control {
 }
 
 #contact-section {
-    padding-top: 0;
+    margin-top: 140px;
 }
 
 #about-section {
     margin-top: 140px;
+}
+
+#about-section .heading strong {
+    color: #FFD615;
+}
+
+#about-section .heading-section {
+    margin-top: 20px;
+}
+
+#about-section ul {
+    list-style-type: none;
+}
+
+#about-section ul .ion-ios-checkmark-circle {
+    color: #FFD615;
 }
 
 .useful-links h2 {
@@ -10014,3 +10037,5 @@ textarea.form-control {
 .bible-verse p {
     text-align: justify;
 }
+
+

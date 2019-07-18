@@ -72,13 +72,21 @@ AOS.init({
 
     var carousel = function() {
         $('.home-slider').owlCarousel({
-            loop: true,
+            merge:true,
+            loop:true,
             autoplay: true,
+            autoplayHoverPause: true,
+            mouseDrag: false,
+            touchDrag: false,
+            video: true,
             margin: 0,
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             nav: false,
-            autoplayHoverPause: false,
+            // autoplayHoverPause: true,
+            onInitialized: function theThing(event){
+                $('.active .owl-video-play-icon').trigger('click');
+            },  
             items: 1,
             navText: [
                 "<span class='ion-md-arrow-back'></span>",
