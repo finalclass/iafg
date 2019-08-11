@@ -86,7 +86,7 @@ AOS.init({
             // autoplayHoverPause: true,
             onInitialized: function theThing(event){
                 $('.active .owl-video-play-icon').trigger('click');
-            },  
+            },
             items: 1,
             navText: [
                 "<span class='ion-md-arrow-back'></span>",
@@ -110,7 +110,7 @@ AOS.init({
     $('nav .dropdown').hover(
         function() {
             var $this = $(this);
-            // 	 timer;
+            //   timer;
             // clearTimeout(timer);
             $this.addClass('show');
             $this.find('> a').attr('aria-expanded', true);
@@ -235,5 +235,65 @@ AOS.init({
             duration: 300 // don't foget to change the duration also in CSS
         }
     });
+
+
+
+
+    function newUpcommingEvents() {
+        var $upcommingEventsContainer = $('.ucpomming-events-counter');
+        var $eventName = $upcommingEventsContainer.find('.event-name');
+        var $eventDays = $upcommingEventsContainer.find('.event-days');
+        var $eventHours = $upcommingEventsContainer.find('.event-hours');
+        var $eventMinutes = $upcommingEventsContainer.find('.event-minutes');
+        var $eventSeconds = $upcommingEventsContainer.find('.event-seconds');
+
+        var upcommingEvents = [
+            {
+                name: 'English service, August 17',
+                date: moment.utc('2019-08-17 14:00')
+            },
+            {
+                name: 'English service, September 21',
+                date: moment.utc('2019-09-21 14:00')
+            },
+            {
+                name: 'English service, October 19',
+                date: moment.utc('2019-10-19 14:00')
+            },
+            {
+                name: 'English service, November 16',
+                date: moment.utc('2019-11-16 14:00')
+            },
+            {
+                name: 'English service, December 21',
+                date: moment.utc('2019-12-21 14:00')
+            }
+        ];
+
+        function findLatestEvent(upcommingEvents) {
+            var now = moment();
+            return upcommingEvents
+                .filter(function (ev) {
+                    return ev.date.isAfter(now);
+                })
+                .sort(function (a, b) {
+                    return a.date.valueOf() - b.date.valueOf();
+                })[0];
+        }
+
+        setInterval(function () {
+            var now = moment();
+            var latestEvent = findLatestEvent(upcommingEvents);
+            var duration = moment.duration(latestEvent.date.diff(now));
+            $eventName.text(latestEvent.name);
+            $eventDays.text(duration.days());
+            $eventHours.text(duration.hours());
+            $eventMinutes.text(duration.minutes());
+            $eventSeconds.text(duration.seconds());
+        }, 1000);
+    }
+
+    newUpcommingEvents();
+
 
 })(jQuery);
