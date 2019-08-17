@@ -283,10 +283,11 @@ AOS.init({
 
         setInterval(function () {
             var now = moment();
+            
             var latestEvent = findLatestEvent(upcommingEvents);
             var duration = moment.duration(latestEvent.date.diff(now));
             $eventName.text(latestEvent.name);
-            $eventDays.text(duration.days());
+            $eventDays.text(Math.floor(duration.asDays()));
             $eventHours.text(duration.hours());
             $eventMinutes.text(duration.minutes());
             $eventSeconds.text(duration.seconds());
