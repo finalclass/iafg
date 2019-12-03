@@ -267,6 +267,54 @@ AOS.init({
             {
                 name: 'English service, December 21',
                 date: moment.utc('2019-12-21 14:00')
+            },
+            {
+                name: 'English service, January 18',
+                date: moment.utc('2020-01-18 14:00')
+            },
+            {
+                name: 'English service, February 15',
+                date: moment.utc('2020-02-15 14:00')
+            },
+            {
+                name: 'English service, March 21',
+                date: moment.utc('2020-03-21 14:00')
+            },
+            {
+                name: 'English service, April 18',
+                date: moment.utc('2020-04-18 14:00')
+            },
+            {
+                name: 'English service, May 16',
+                date: moment.utc('2020-05-16 14:00')
+            },
+            {
+                name: 'English service, June 20',
+                date: moment.utc('2020-06-20 14:00')
+            },
+            {
+                name: 'English service, July 18',
+                date: moment.utc('2020-07-18 14:00')
+            },
+            {
+                name: 'English service, August 15',
+                date: moment.utc('2020-08-15 14:00')
+            },
+            {
+                name: 'English service, September 19',
+                date: moment.utc('2020-09-19 14:00')
+            },
+            {
+                name: 'English service, October 17',
+                date: moment.utc('2020-10-17 14:00')
+            },
+            {
+                name: 'English service, November 21',
+                date: moment.utc('2020-11-21 14:00')
+            },
+            {
+                name: 'English service, December 19',
+                date: moment.utc('2020-12-19 14:00')
             }
         ];
 
@@ -285,6 +333,7 @@ AOS.init({
             var now = moment();
             
             var latestEvent = findLatestEvent(upcommingEvents);
+            $('.next-event-date').text(latestEvent.date.format('DD MMMM YYYY'));
             var duration = moment.duration(latestEvent.date.diff(now));
             $eventName.text(latestEvent.name);
             $eventDays.text(Math.floor(duration.asDays()));
