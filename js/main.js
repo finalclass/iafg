@@ -285,6 +285,7 @@ AOS.init({
             var now = moment();
             
             var latestEvent = findLatestEvent(upcommingEvents);
+            $('.next-event-date').text(latestEvent.date.format('DD MMMM YYYY'));
             var duration = moment.duration(latestEvent.date.diff(now));
             $eventName.text(latestEvent.name);
             $eventDays.text(Math.floor(duration.asDays()));
