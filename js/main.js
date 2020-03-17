@@ -277,10 +277,6 @@ AOS.init({
                 date: moment.utc('2020-02-15 14:00')
             },
             {
-                name: 'English service, March 21',
-                date: moment.utc('2020-03-21 14:00')
-            },
-            {
                 name: 'English service, April 18',
                 date: moment.utc('2020-04-18 14:00')
             },
