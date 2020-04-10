@@ -277,40 +277,109 @@ AOS.init({
                 date: moment.utc('2020-02-15 14:00')
             },
             {
-                name: 'English service, April 18',
-                date: moment.utc('2020-04-18 14:00')
+                name: 'Internet English service, April 11',
+                date: moment.utc('2020-04-11 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, May 16',
-                date: moment.utc('2020-05-16 14:00')
+                name: 'Internet English service, April 18',
+                date: moment.utc('2020-04-18 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, June 20',
-                date: moment.utc('2020-06-20 14:00')
+                name: 'Internet English service, April 25',
+                date: moment.utc('2020-04-25 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, July 18',
-                date: moment.utc('2020-07-18 14:00')
+                name: 'Internet English service, May 2',
+                date: moment.utc('2020-05-02 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, August 15',
-                date: moment.utc('2020-08-15 14:00')
+                name: 'Internet English service, May 9',
+                date: moment.utc('2020-05-09 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, September 19',
-                date: moment.utc('2020-09-19 14:00')
+                name: 'Internet English service, May 16',
+                date: moment.utc('2020-05-16 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, October 17',
-                date: moment.utc('2020-10-17 14:00')
+                name: 'Internet English service, May 23',
+                date: moment.utc('2020-05-23 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, November 21',
-                date: moment.utc('2020-11-21 14:00')
+                name: 'Internet English service, May 30',
+                date: moment.utc('2020-05-30 10:00'),
+                location: 'https://zoom.us/j/499222537'
             },
             {
-                name: 'English service, December 19',
-                date: moment.utc('2020-12-19 14:00')
+                name: 'Internet English service, June 6',
+                date: moment.utc('2020-06-06 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, June 13',
+                date: moment.utc('2020-06-13 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, June 20',
+                date: moment.utc('2020-06-20 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, June 27',
+                date: moment.utc('2020-06-27 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, July 4',
+                date: moment.utc('2020-07-04 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, July 11',
+                date: moment.utc('2020-07-11 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, July 18',
+                date: moment.utc('2020-07-18 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, July 25',
+                date: moment.utc('2020-07-25 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, August 1',
+                date: moment.utc('2020-08-01 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, August 8',
+                date: moment.utc('2020-08-08 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, August 15',
+                date: moment.utc('2020-08-15 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, August 22',
+                date: moment.utc('2020-08-22 10:00'),
+                location: 'https://zoom.us/j/499222537'
+            },
+            {
+                name: 'Internet English service, August 29',
+                date: moment.utc('2020-08-29 10:00'),
+                location: 'https://zoom.us/j/499222537'
             }
         ];
 
@@ -330,6 +399,7 @@ AOS.init({
             
             var latestEvent = findLatestEvent(upcommingEvents);
             $('.next-event-date').text(latestEvent.date.format('DD MMMM YYYY'));
+            $('.zoom-link').text(latestEvent.location).attr('href', latestEvent.location);
             var duration = moment.duration(latestEvent.date.diff(now));
             $eventName.text(latestEvent.name);
             $eventDays.text(Math.floor(duration.asDays()));
